@@ -2,42 +2,27 @@
 
 import Link from "next/link";
 import Script from "next/script";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 
 import "./globals.css";
 import "../public/css/normalize.css";
 import "../public/css/styles.css";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function HomePage() {
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
+
   return (
     <>
       {/* Your navbar */}
+      <Navbar />
 
-      <nav className="nav collapsible" id="navbar">
-        <Link href="/">
-          <img
-            style={{ width: "100px", height: "auto" }}
-            src="/images/logo.png"
-            alt=""
-          />
-        </Link>
+      <main style={{ padding: "2rem" }}></main>
 
-        <svg className="icon icon--black nav__toggler">
-          <use xlinkHref="/images/sprite.svg#menu" />
-        </svg>
-
-        <ul className="list nav__list collapsible__content">
-          <li className="nav__item">
-            <Link href="/gallery">Gallery</Link>
-          </li>
-          <li className="nav__item">
-            <Link href="/about">About</Link>
-          </li>
-          <li className="nav__item">
-            <Link href="/bookings">Bookings</Link>
-          </li>
-        </ul>
-      </nav>
       {/* Hero */}
       <section className="block hero">
         <div className="grid grid--1x2">
