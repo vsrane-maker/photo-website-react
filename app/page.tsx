@@ -1,65 +1,285 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import Link from "next/link";
+import Script from "next/script";
+import Navbar from "./components/Navbar";
+
+import "./globals.css";
+import "../public/css/normalize.css";
+import "../public/css/styles.css";
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <>
+      {/* Your navbar */}
+
+      <nav className="nav collapsible" id="navbar">
+        <Link href="/">
+          <img
+            style={{ width: "100px", height: "auto" }}
+            src="/images/logo.png"
+            alt=""
+          />
+        </Link>
+
+        <svg className="icon icon--black nav__toggler">
+          <use xlinkHref="/images/sprite.svg#menu" />
+        </svg>
+
+        <ul className="list nav__list collapsible__content">
+          <li className="nav__item">
+            <Link href="/gallery">Gallery</Link>
+          </li>
+          <li className="nav__item">
+            <Link href="/about">About</Link>
+          </li>
+          <li className="nav__item">
+            <Link href="/bookings">Bookings</Link>
+          </li>
+        </ul>
+      </nav>
+      {/* Hero */}
+      <section className="block hero">
+        <div className="grid grid--1x2">
+          <header className="block__header hero__content">
+            <h1 className="block__heading">VJ&apos;s Visuals</h1>
+            <p className="hero__tagline">Nature, Portraits, Sports and More</p>
+            <Link href="/gallery" className="btn btn--accent btn--stretched">
+              View Gallery
+            </Link>
+          </header>
+
+          <picture>
+            <source
+              type="image/jpg"
+              srcSet="/images/resized/mounttamalpais-23_resized.jpg 2x, /images/resized/mounttamalpais_resized_small.jpg 1x"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <img
+              className="hero__image"
+              src="/images/mounttamalpais-23.jpg"
+              alt=""
+            />
+          </picture>
         </div>
-      </main>
-    </div>
+      </section>
+      {/* Header block */}
+      <header
+        style={{ marginTop: "15rem", marginBottom: "20rem" }}
+        data-aos="fade-up"
+        className="block__header"
+      >
+        <h2>Capture Your Moments</h2>
+        <p>So you can relive the moments that matter most.</p>
+      </header>
+      {/* About feature */}
+      <article className="grid grid--1x2-1 feature">
+        <div data-aos="fade-left">
+          <h3 style={{ paddingLeft: "2rem" }} className="feature__heading">
+            About Me
+          </h3>
+
+          <p className="aboutMe__description">
+            My name is Viraaj Rane. I&apos;m currently a first year student at
+            UC San Diego pursuing a Bachelor&apos;s degree in Computer Science.
+            Photography has been a passion of mine for several years, and I
+            specialize in wildlife photography as well as portrait photography.
+            I love capturing the beauty of nature and the essence of people
+            through my lens. However, I love to explore different genres such as
+            sports and automotive photography.
+          </p>
+
+          <Link
+            style={{ paddingLeft: "2rem" }}
+            href="/about"
+            className="link-arrow"
+          >
+            Learn More
+          </Link>
+        </div>
+
+        <picture data-aos="fade-left">
+          <source
+            type="image/jpg"
+            srcSet="/images/resized/ViraajRane_pfp.jpg 1x, /images/resized/ViraajRane_pfp_2x.jpg 2x"
+          />
+          <img
+            className="feature__image"
+            src="/images/resized/ViraajRane_pfp_resized.jpg"
+            alt=""
+          />
+        </picture>
+      </article>
+      {/* Booking header */}
+      <header className="block__header" data-aos="fade-up">
+        <h2>Book a session for your next photoshoot, party, or event!</h2>
+      </header>
+      {/* Plans */}
+      <section className="block container block-plans">
+        <div className="grid grid--1x3">
+          {/* Plan 1 */}
+          <div className="plan" data-aos="fade-right" data-aos-delay="100">
+            <div className="card card--secondary">
+              <header className="card__header">
+                <h3 className="plan__name">Solo/Duo Session</h3>
+                <span className="plan__price">$75</span>
+                <span className="plan__billing-cycle">/hour</span>
+                <span className="badge badge--secondary badge--small">
+                  10% off
+                </span>
+                <span className="plan__description">Groups of 1-2</span>
+              </header>
+
+              <div className="card__body">
+                <ul className="list list--tick">
+                  <li className="list__item">50+ Edited Images</li>
+                  <li className="list__item">Advanced Retouching</li>
+                  <li className="list__item">7-14 Day Turnaround</li>
+                  <li className="list__item">Includes Solos (Limited)</li>
+                </ul>
+
+                <Link
+                  href="/bookings"
+                  className="btn btn--outline btn--block btn--primary"
+                >
+                  Request this Session
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Plan 2 */}
+          <div className="plan" data-aos="fade-up" data-aos-delay="100">
+            <div className="card card--primary">
+              <header className="card__header">
+                <h3 className="plan__name">Group Session</h3>
+                <span className="plan__price">$120</span>
+                <span className="plan__billing-cycle">/hour</span>
+                <span className="badge badge--secondary badge--small">
+                  10% off
+                </span>
+                <span className="plan__description">Groups of 4+</span>
+              </header>
+
+              <div className="card__body">
+                <ul className="list list--tick">
+                  <li className="list__item">100+ Edited Images</li>
+                  <li className="list__item">Advanced Retouching</li>
+                  <li className="list__item">7-14 Day Turnaround</li>
+                  <li className="list__item">Includes Solos (Limited)</li>
+                </ul>
+
+                <Link
+                  href="/bookings"
+                  className="btn btn--outline btn--block btn--primary"
+                >
+                  Request this Session
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Plan 3 */}
+          <div className="plan" data-aos="fade-left" data-aos-delay="100">
+            <div className="card card--primary">
+              <header className="card__header">
+                <h3 className="plan__name">Events /</h3>
+                <span className="plan__price">$200</span>
+                <span className="plan__billing-cycle">/hour</span>
+                <span className="badge badge--secondary badge--small">
+                  10% off
+                </span>
+                <span className="plan__description">Groups of 8+</span>
+              </header>
+
+              <div className="card__body">
+                <ul className="list list--tick">
+                  <li className="list__item">200+ Edited Images</li>
+                  <li className="list__item">Advanced Retouching</li>
+                  <li className="list__item">7-14 Day Turnaround</li>
+                  <li className="list__item">Includes Solos (Limited)</li>
+                </ul>
+
+                <Link
+                  href="/bookings"
+                  className="btn btn--outline btn--block btn--primary"
+                >
+                  Request this Session
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Portfolio */}
+      <header>
+        <h2 data-aos="fade-up" className="block__header">
+          Check out my Portfolio!
+        </h2>
+
+        <section className="home__gallery">
+          <Link
+            data-aos="fade-right"
+            className="home__gallery_option"
+            href="/events"
+          >
+            <img src="/images/events/anjali_grad-1.jpg" alt="" />
+          </Link>
+
+          <Link
+            data-aos="fade-left"
+            className="home__gallery_option"
+            href="/cars"
+          >
+            <img src="/images/exports/monterey-35.jpg" alt="" />
+          </Link>
+        </section>
+      </header>
+      {/* Footer */}
+      <footer className="block--dark footer">
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <p className="footer-title">VJ&apos;s Visuals</p>
+            <p className="footer-tagline">Nature, Portraits, Sports and More</p>
+          </div>
+
+          <p className="footer-genres">Sports • Events • Nature • Cars</p>
+
+          <nav className="footer-nav" aria-label="Footer">
+            <Link href="/gallery">Gallery</Link>
+            <span className="dot" aria-hidden="true">
+              •
+            </span>
+            <Link href="/about">About</Link>
+            <span className="dot" aria-hidden="true">
+              •
+            </span>
+            <Link href="#">Contact</Link>
+          </nav>
+
+          <div className="footer-social">
+            <a
+              href="https://www.instagram.com/vjsvisuals/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              Instagram •
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/viraaj-sushil-rane-b65251265/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <p className="footer-copy">© 2026 Viraaj Rane. All rights reserved.</p>
+      </footer>
+      {/* Scripts (converted from your bottom-of-body scripts) */}
+    </>
   );
 }
