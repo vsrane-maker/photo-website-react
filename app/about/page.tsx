@@ -1,7 +1,14 @@
 import Navbar from "../components/Navbar";
 import Link from "next/link";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutPage() {
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
+
   return (
     <>
       <Navbar />
