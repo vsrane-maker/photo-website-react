@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type BookingPayload = {
   name: string;
@@ -12,6 +15,10 @@ type BookingPayload = {
 };
 
 export default function BookingsPage() {
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
+
   const [status, setStatus] = useState<string>("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
