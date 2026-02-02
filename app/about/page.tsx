@@ -34,7 +34,7 @@ export default function AboutPage() {
             capturing the beauty of nature and the essence of people through my
             lens. However, I love to explore different genres such as sports and
             automotive photography.
-            <br />
+            <br /> <br />
             I started my photography journey by posting on my Instagram for my
             friends to see. However, I quickly realized my small hobby was
             turning turning into something much bigger. As my skills in
@@ -42,7 +42,7 @@ export default function AboutPage() {
             friends who asked to take their graduation pictures. This moment
             encouraged me to experiment with other forms of photography such as
             events, sports, and astrophotography.
-            <br />
+            <br /> <br />
             Now, I am a professional event photographer that has the priviledge
             of capturing unforgettable moments for the people around me.
             Photography is a way I can capture the stories, adventures, and rare
