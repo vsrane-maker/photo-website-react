@@ -25,18 +25,6 @@ export default function eventsPage() {
       </section>
 
       <section className="masonry--gallery">
-        <section>
-          <img src="/images/events/anjali_grad-1.jpg" alt="" />
-          <img src="/images/events/anjali_grad2.jpg" alt="" />
-          <img src="/images/events/anjali_grad3.jpg" alt="" />
-          <img src="/images/events/anjali_grad4.jpg" alt="" />
-          <img src="/images/events/anjali_grad5.jpg" alt="" />
-          <img src="/images/events/anjali_grad6.jpg" alt="" />
-          <img src="/images/events/anjali_grad7.jpg" alt="" />
-        </section>
-      </section>
-
-      <section className="masonry--gallery">
         <img src="/images/events/gradshoot1.jpg" alt="" />
         <img src="/images/events/gradshoot2.jpg" alt="" />
         <img src="/images/events/gradshoot3.jpg" alt="" />
@@ -46,6 +34,18 @@ export default function eventsPage() {
         <img src="/images/events/gradshoot7.jpg" alt="" />
         <img src="/images/events/gradshoot8.jpg" alt="" />
         <img src="/images/events/gradshoot9.jpg" alt="" />
+      </section>
+
+      <section className="masonry--gallery">
+        <section>
+          <img src="/images/events/anjali_grad-1.jpg" alt="" />
+          <img src="/images/events/anjali_grad2.jpg" alt="" />
+          <img src="/images/events/anjali_grad3.jpg" alt="" />
+          <img src="/images/events/anjali_grad4.jpg" alt="" />
+          <img src="/images/events/anjali_grad5.jpg" alt="" />
+          <img src="/images/events/anjali_grad6.jpg" alt="" />
+          <img src="/images/events/anjali_grad7.jpg" alt="" />
+        </section>
       </section>
 
       <h3 style={{ textAlign: "center" }}>Prom Photoshoots</h3>
