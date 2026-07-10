@@ -22,6 +22,10 @@ export default function eventsPage() {
         <img src="/images/events/shubhi/shubhi_11.jpg" alt="" />
         <img src="/images/events/shubhi/shubhi_12.jpg" alt="" />
         <img src="/images/events/shubhi/shubhi_13.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_14.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_15.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_16.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_17.jpg" alt="" />
       </section>
 
       <section className="masonry--gallery">
