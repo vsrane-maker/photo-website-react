@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Link from "next/link";
+import SkeletonImage from "../components/SkeletonImage";
 
 export default function carPage() {
   return (

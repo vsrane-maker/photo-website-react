@@ -774,10 +774,9 @@ a {
     padding: 4rem 2rem;
 }
 
-.masonry--gallery img {
+.masonry--gallery > * {
     width: 100%;
     margin-bottom: 1.5rem;
-    
     break-inside: avoid;
     transition: transform 0.3s;
 }
@@ -853,5 +852,3 @@ a {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-
-

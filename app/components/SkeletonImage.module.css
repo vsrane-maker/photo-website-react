@@ -1,0 +1,33 @@
+.fill {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* next/image <img> */
+.img {
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.hidden { opacity: 0; }
+.visible { opacity: 1; }
+
+.skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
