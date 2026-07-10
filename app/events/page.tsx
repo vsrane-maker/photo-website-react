@@ -9,23 +9,23 @@ export default function eventsPage() {
       <h3 style={{ textAlign: "center" }}>Graduation Photoshoots</h3>
 
       <section className="masonry--gallery">
-        <img src="/images/events/shubhi/shubhi_1.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_2.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_3.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_4.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_5.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_6.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_7.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_8.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_9.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_10.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_11.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_12.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_13.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_14.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_15.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_16.jpg" alt="" />
-        <img src="/images/events/shubhi/shubhi_17.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_1-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_2-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_3-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_4-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_5-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_6-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_7-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_8-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_9-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_10-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_11-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_12-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_13-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_14-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_15-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_16-compressed.jpg" alt="" />
+        <img src="/images/events/shubhi/shubhi_17-compressed.jpg" alt="" />
       </section>
 
       <section className="masonry--gallery">
